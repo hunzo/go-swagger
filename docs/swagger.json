@@ -1,0 +1,44 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {},
+        "license": {}
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "description": "get string by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "TEST Swagger",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.ret"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "handler.ret": {
+            "type": "object",
+            "properties": {
+                "password": {
+                    "type": "string",
+                    "example": "myPassword"
+                },
+                "username": {
+                    "type": "string",
+                    "example": "myUsername"
+                }
+            }
+        }
+    }
+}

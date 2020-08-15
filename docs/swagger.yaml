@@ -1,0 +1,28 @@
+definitions:
+  handler.ret:
+    properties:
+      password:
+        example: myPassword
+        type: string
+      username:
+        example: myUsername
+        type: string
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: get string by ID
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.ret'
+      summary: TEST Swagger
+swagger: "2.0"
